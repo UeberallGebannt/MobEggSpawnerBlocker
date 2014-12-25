@@ -1,0 +1,14 @@
+main: me.sothatsit.mobeggspawnerblocker.MobEggSpawnerBlocker
+author: sothatsit
+name: MobEggSpawnerBlocker
+version: 1
+commands:
+   mobeggspawnerblocker:
+      description: 'reload MobEggSpawnerBlocker config'
+permissions:
+   mobeggspawnerblocker.reload:
+      description: 'gives access to /mobeggspawnerblocker command'
+      default: op
+   mobeggspawnerblocker.override:
+      description: 'Override mob egg spawner blocker'
+      default: op
