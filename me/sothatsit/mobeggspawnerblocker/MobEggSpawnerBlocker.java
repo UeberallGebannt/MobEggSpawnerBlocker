@@ -68,7 +68,7 @@ public class MobEggSpawnerBlocker extends JavaPlugin implements Listener
         if (b == null)
             return;
         
-        if (b.getType() != Material.MOB_SPAWNER)
+        if (b.getType() != Material.SPAWNER)
             return;
         
         ItemStack i = e.getItem();
@@ -76,7 +76,7 @@ public class MobEggSpawnerBlocker extends JavaPlugin implements Listener
         if (i == null)
             return;
         
-        if (i.getType() != Material.MONSTER_EGG && i.getType() != Material.MONSTER_EGGS)
+        if (!(i.getType().name().contains("SPAWN_EGG") || i.getType().name().contains("MONSTER_EGG")))
             return;
         
         CreatureSpawner cs = (CreatureSpawner) b.getState();
@@ -96,7 +96,7 @@ public class MobEggSpawnerBlocker extends JavaPlugin implements Listener
             {
                 Block b = loc.getBlock();
                 
-                if (b == null || b.getType() != Material.MOB_SPAWNER)
+                if (b == null || b.getType() != Material.SPAWNER)
                     return;
                 
                 CreatureSpawner cs = (CreatureSpawner) b.getState();
